@@ -27,8 +27,9 @@ The experiments are conducted on a Ubuntu 16.04 LTS PC with one NVIDIA GeForce G
 
 ## Installation
 1. Clone this repository.
-
-        git clone https://github.com/Mayy1994/Left_Ventricle_Segmentation.git
+```
+git clone git@github.com:Mayy1994/Left_Ventricle_Segmentation.git
+```
 
 2. As we use a crop and resize function like that in [Fast R-CNN](https://github.com/longcw/RoIAlign.pytorch) to fix the size of the state, it needs to be built with the right -arch option for CUDA support before training. [[Reference]](https://github.com/multimodallearning/pytorch-mask-rcnn)
 
@@ -39,17 +40,19 @@ The experiments are conducted on a Ubuntu 16.04 LTS PC with one NVIDIA GeForce G
     | GTX 1070 | sm_61 |
     | GTX 1080 (Ti) | sm_61 |
 
-        cd nms/src/cuda/
-        nvcc -c -o nms_kernel.cu.o nms_kernel.cu -x cu -Xcompiler -fPIC -arch=[arch]
-        cd ../../
-        python build.py
-        cd ../
+```
+cd nms/src/cuda/
+nvcc -c -o nms_kernel.cu.o nms_kernel.cu -x cu -Xcompiler -fPIC -arch=[arch]
+cd ../../
+python build.py
+cd ../
 
-        cd roialign/roi_align/src/cuda/
-        nvcc -c -o crop_and_resize_kernel.cu.o crop_and_resize_kernel.cu -x cu -Xcompiler -fPIC -arch=[arch]
-        cd ../../
-        python build.py
-        cd ../../
+cd roialign/roi_align/src/cuda/
+nvcc -c -o crop_and_resize_kernel.cu.o crop_and_resize_kernel.cu -x cu -Xcompiler -fPIC -arch=[arch]
+cd ../../
+python build.py
+cd ../../
+```
         
 ## Dataset setup
 Please download the datasets [Sunny Brook 2009](https://drive.google.com/file/d/1IoNF54XY7WU51sFqtTUBt9t1xJ8fQaYP/view?usp=sharing) and [ACDC 2017](https://drive.google.com/file/d/1Pu5mYIBI6rEqh0AuJxKbNf_8XmGSfbQm/view?usp=sharing) and unzip the datasets to the current directory.
