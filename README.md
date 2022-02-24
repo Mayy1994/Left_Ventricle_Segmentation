@@ -1,5 +1,7 @@
 # Left_Ventricle_Segmentation
 
+Edge-Sensitive Left Ventricle Segmentation Using Deep Reinforcement Learning
+
 For the left ventricle segmentation, the clinical experts complete the task of segmentation by first finding an initial point on the boundary, and then locating the rest of the edge points to obtain a closed mask. Inspired by the human segmentation process, we explore how to utilize deep reinforcement learning to perform left ventricle segmentation. 
 
 
