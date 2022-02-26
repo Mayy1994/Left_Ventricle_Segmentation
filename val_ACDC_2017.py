@@ -517,16 +517,6 @@ def main():
             APD_post = ep_distance / con_array.shape[0]
 
 
-        test_reward_list.append(iou_score)
-        test_reward_post_list.append(iou_score_post)
-        test_precision_list.append(precision)
-        test_recall_list.append(recall)
-        test_precision_post_list.append(precision_post)
-        test_recall_post_list.append(recall_post)
-        test_APD_list.append(APD)
-        test_APD_post_list.append(APD_post)
-
-
         print("\r[Sample %d] [Episode Length %d] [F_measure %.4f] [F_measure_post %.4f]" % \
                 ((batch_idx+1),  int(len(points)-2), float(iou_score), float(iou_score_post)))
 
