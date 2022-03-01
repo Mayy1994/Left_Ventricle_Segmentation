@@ -6,7 +6,6 @@ For the left ventricle segmentation, the clinical experts complete the task of s
 
 The following demo shows the segmentation process of the proposed reinforcement learning agent. (This is just a demo. Note that the agent takes 0.9 seconds in average to find a closed contour). 
 
-
 <p align="center"><img src="./images/demo.gif" width="300" alt="" /></p>
 
 The proposed model consists of two neural networks. The first is FirstP-Net, whose goal is to find the first edge point and generate a probability map of the edge points positions. The second is NextP-Net, which locates the next point based on the previous edge point and image information. This model segments the image by finding the edge points step by step and ultimately obtaining a closed and accurate segmentation result.
